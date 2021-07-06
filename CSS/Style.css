@@ -1,0 +1,846 @@
+/* voor alles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: white;
+}
+
+/* Menubar */
+
+.Menu {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #ddad41;
+    height: 60px;
+    width: 100%;
+    z-index: 1;
+}
+
+.Menulinks {
+    display: flex;
+    list-style: none;
+    justify-content: right;
+    margin-left: 15%;
+    
+}
+
+.Menu a {
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.Menulinks a {
+    font-family: 'Raleway', sans-serif;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    padding: 10px 18px;
+    color: black;
+}
+
+.Menulinks a:hover {
+    background-color: rgb(100, 34, 34);
+    padding: 10px 18px;
+    color: rgb(255, 187, 0);
+}
+
+.logo {
+    /* color: #821b34; */
+    display: flex;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 50px;
+    margin-right: 40px;
+    letter-spacing: 2px;
+    color: rgb(109, 41, 37);
+}
+
+/* login logout button */
+
+.LLBTN a{
+    border: 3px solid white;
+    background-color: rgb(131, 105, 57);
+}
+
+/* menu flex */
+
+.Menuflex {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    width: 30px;
+    display: none;
+}
+
+.Menuflex .Bar {
+    height: 10px;
+    width: 100%;
+    background-color: rgb(255, 187, 0);
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+@media (max-width: 1127px) {
+    .Menuflex {
+        display: flex;
+    }
+    
+    .Menulinks {
+        width: 100%;
+        display: none;
+        background-color: #ddad41;
+        height: 130px;
+        padding: 0;
+        margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        padding:0 15px;
+    }
+
+    .Menulinks a:hover {
+        padding: 1px;
+    }
+
+    .Menulinks.active {
+        display: flex;
+    }
+}
+
+/* Index.php */
+/* Banner voor index*/
+
+.IndexBanner {
+    display: flex;
+    background-image:url(../Images/IndexBanner.jpg);
+    height: 90vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.IndexBRText {
+    background-color: #2f2e2e77;
+    margin-top: 600px;
+    width: 100%;
+}
+
+.IndexBRText h1, .IndexBRText h2 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.IndexBRText h1 {
+    font-size: 120px;
+}
+
+/* Waarom bestevaer voor index */
+
+.WhyBestevaer {
+    height: 70vh;
+    background-color:#f2f0f0;
+    width: 100%;
+}
+
+.TitleWhy h1, .TitleWhy h2 {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.TitleWhy h1 {
+    position: relative;
+    top: 40px;
+    font-size: 60px;
+    font-weight: 300;
+}
+
+.TitleWhy h2 {
+    position: relative;
+    font-size: 20px;
+    font-weight: 200;
+    color: gray;
+    top: 40px;
+}
+
+
+.Icons {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+}
+
+.Box1, .Box2, .Box3 {
+    display: flex;
+    flex-direction: column;
+    border: 9px solid  #ddad41;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 80px;
+    width: 25%;
+    background-color: white;
+    position: relative;
+    top: 80px;
+    flex: 1;
+}   
+
+.Icons h3 {
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #2f2e2e;
+}
+
+.Icons .fas {
+    font-size: 60px;
+    text-align: center;
+    color: rgb(109, 41, 37);
+}
+
+/* Informatie voor index */
+
+.Informatie {
+    display: flex;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.Text1 {
+    display: flex;
+    background-color: #2f2e2e;
+    width: 50%;
+    color: white;
+    font-size: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.Text1 h1, .Text2 h1 {
+    margin-top: 100px;
+    width: 360px;
+    text-align: center;
+}
+
+.Text1 h1, .btnInformatie {
+    margin-left: 400px;
+}
+
+.Text2 h1, .btnBeladingsapp {
+    margin-right: 400px;
+}
+
+.Text2 {
+    display: flex;
+    background-color: #ddad41;
+    width: 50%;
+    font-size: 40px;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #2f2e2e;
+    align-items: center;
+    justify-self: center;
+    flex-direction: column;
+    flex: 1;
+}
+
+.btnInformatie {
+    font-size: 15px;
+    padding: 14px 23px;
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid rgb(255, 254, 254);
+    color: white;
+}
+
+.btnInformatie:hover {
+    transition: 1s;
+    background-color: #821b34;
+    color:rgb(255, 187, 0);
+}
+
+.btnBeladingsapp {
+    font-size: 15px;
+    padding: 14px 23px;
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: rgba(255, 255, 255, 0);
+    border: 1px solid black;
+}
+
+.btnBeladingsapp:hover {
+    transition: 1s;
+    background-color: #821b34;
+    color:rgb(255, 187, 0);
+}
+
+
+
+/* Endbackground voor index */
+
+.BWbackground {
+    display: flex;
+    background-image: url(../Images/BWbackground.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+    filter: grayscale(100%);
+}
+
+/* overons.php */
+/* onze schepen */
+
+.onzeschepenBG {
+    background-image: url('../Images/onzeschepen.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schepeninfoBTN {
+    background-color:#ddad41;
+    padding: 10px; 
+    margin: 20px;
+    font-size: 19px;
+    border: 2px solid white;
+}
+
+.schepeninfoBTN:hover {
+    transition: 300ms;
+    background-color:rgb(100, 34, 34);
+    color: white;
+}
+
+.schepeninfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.schepeninfo img {
+    width: 800px;
+    margin-top: 20px;
+}
+
+.onzeschepenform {
+    display: flex;
+    flex-direction: column;
+}
+
+#resultaat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(213, 243, 239);
+    border: 6px solid black;
+    width: 1100px;
+    height: 1000px;
+    font-size: 50px;
+}
+
+
+/* Beladingsapp.php */
+/* beladingsapp banner */
+
+.BeladingsappBG {
+    background-image: url(../Images/1.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 200vh;
+}
+
+.BeladingsappBanner {
+    display: flex;
+    background-color: #2c9ed3;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.BeladingsappBanner h1 {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 100px;
+}
+
+/* beladingsapp berekenen */
+
+.BeladingsBox {
+    display: flex;
+    background-image: url(../Images/BWbackgroundBG.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.BeladingsForm {
+    background-color: #2c9ed3;
+    color:rgb(43, 43, 43);
+    width: 700px;
+    height: 800px;
+    padding: 120px 140px;
+    position: absolute;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.BeladingsForm h1 {
+    text-align: center;
+    position: relative;
+    bottom: 60px;
+    font-size: 60px;
+}
+
+.BeladingsFormbox {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 12px 22px;
+    margin: 10px -100px;
+    bottom: 40px;
+}
+
+.BeladingsFormbox label{
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.BeladingsFormbox input {
+    font-size: 15px;
+}
+
+.BeladingsFormbox select {
+    font-size: 15px;
+    padding: 5px 40px;
+    background-color: #ffffff;
+}
+
+.BeladingsFormbox textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    font-size: 15px;
+    height: 100px;
+    max-height: 140px;
+}
+
+.BerekenBTN {
+    position: relative;
+    width: 100%;
+    padding: 20px 20px;
+    bottom: 20px;
+    font-size: 20px;
+    background-color: #ddad41;
+    color:rgb(100, 34, 34);
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.BerekenBTN:hover {
+    transition: 1s;
+    background-color: rgb(100, 34, 34);
+    color: #ddad41;
+}
+
+/* beladingsapp uitkomst */
+.Flexuitkomst {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#Uitkomst {
+    background-color: #90d6f7;
+    color:rgb(0, 0, 0);
+    width: 700px;
+    height: 300px;
+    padding: 120px 140px;
+    position: absolute;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+
+#Uitkomst h1 {
+    text-align: left;
+    position: relative;
+    bottom: 35px;
+    font-size: 40px;
+}
+
+/* Contact.php */
+/* Contact Banner */
+
+.ContactBanner {
+    display: flex;
+    background-color: #2b3c5a;
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContactBanner h1{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 100px;
+}
+
+/* Contact form */
+
+.ZoekContact {
+    display: flex;
+    background-image: url(../Images/ContactBG.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.ContactForm {
+    background-image: url(../Images/ContactForm.jpg);
+    background-position: center;
+    background-size: cover;
+    color:rgb(43, 43, 43);
+    width: 700px;
+    height: 800px;
+    padding: 120px 140px;
+    position: absolute;
+    border: 2px solid #1a1a1a;
+    border-radius: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.ContactForm h1 {
+    text-align: center;
+    position: relative;
+    bottom: 50px;
+    font-size: 60px;
+}
+
+.ContactFormbox {
+    position: relative;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 12px 22px;
+    margin: 10px -100px;
+    bottom: 40px;
+}
+
+.ContactFormbox label{
+    display: block;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.ContactFormbox input {
+    font-size: 15px;
+}
+
+.ContactFormbox textarea {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    font-size: 15px;
+    height: 100px;
+    max-height: 140px;
+}
+
+#SendContact {
+    position: relative;
+    width: 100%;
+    padding: 20px 20px;
+    bottom: 20px;
+    font-size: 20px;
+    background-color: #821b34;
+    color:rgb(255, 174, 0);
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+#SendContact:hover {
+    transition: 1s;
+    background-color: #ddad41;
+    color:rgb(100, 34, 34);
+}
+
+
+/* login.php */
+/* login pagina */
+
+.loginBG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../Images/loginBG.jpg");
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.loginlayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(212, 230, 240);
+    background-position: center;
+    background-size: cover;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.loginform{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.loginform label{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 40px;
+}
+
+#gebruikersnaam, #wachtwoord {
+    padding: 3px;
+    font-size: 20px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+#loginBTN {
+    background-color:#ddad41;
+    padding: 10px; 
+    margin: 20px;
+    font-size: 19px;
+    border: 2px solid white;
+}
+
+#loginBTN:hover {
+    transition: 300ms;
+    background-color:rgb(100, 34, 34);
+    color: white;
+}
+
+.error {
+    font-size: 30px;
+    color: red;
+}
+
+/* registreer.php */
+/* registreer pagina */
+
+.registreerBG{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("../Images/loginBG.jpg");
+    background-attachment: fixed;
+    background-position: bottom;
+    background-size: cover;
+}
+
+.registreerlayout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(212, 230, 240);
+    background-position: center;
+    background-size: cover;
+    border: 5px solid rgb(0, 0, 0);
+}
+
+.registreerform{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.registreerform label{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 40px;
+}
+
+.registreerBTN {
+    background-color:#ddad41;
+    padding: 10px; 
+    margin: 20px;
+    font-size: 19px;
+    border: 2px solid white;
+}
+
+.registreerBTN:hover {
+    transition: 300ms;
+    background-color:rgb(100, 34, 34);
+    color: white;
+}
+
+/* footer voor alles*/
+
+.Footer {
+    background-color: #1f1f1f;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Footer h1 {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #ddad41;
+    font-size: 100px;
+}
+
+.Footer h2 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #ddad41;
+}
+
+.FooterTXT {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    flex: 1;
+}
+
+.FooterTXT p {
+    font-size: 20px;
+    color: White;
+    margin-top: 20px;
+}
+
+.FooterTXT i {
+    color: #ddad41;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.FooterBottom {
+    display: flex;
+    background-color: #1a1a1a;
+    color: rgb(255, 174, 0);
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* mobiel voor alles */
+
+@media (max-width: 600px) {
+    .IndexBanner, .BWbackground {
+        background-attachment: scroll;
+        width: 100%
+    }
+    .Box1, .Box2, .Box3 {
+        margin-right: -60px;
+    }
+    .IndexBRText {
+        margin-top: 600px;
+    }
+    .IndexBRText h1{
+        font-size: 50px;
+    }
+    .IndexBRText h2 {
+        font-size: 20px;
+    }
+    .Text1 h1{
+        width: 100px;
+        position: relative;
+        left: -10px;
+        font-size: 30px;
+    }
+    .Text2 h1 {
+        width: 100px;
+        position: relative;
+        right: 25px;
+        font-size: 30px;
+    }
+    .Footer h1 {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 700px) {
+    .Box1, .Box2, .Box3 {
+        display: block;
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin-left: 60px;
+    }
+    .Icons {
+        display: block;
+        flex-direction: column;
+        position: absolute;
+    }
+    .WhyBestevaer {
+        height: 150vh;
+    }
+}
+
+@media (max-width: 450px) {
+    .WhyBestevaer {
+        height: 200vh;
+        width: 100%;
+    }
+    .Box1, .Box2, .Box3 {
+        margin-right: -180px;
+        width: 100%;
+    }
+    .IndexBRText {
+        margin-top: 400px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .Text1, .Text2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1600px) {
+    .Text1 h1, .btnInformatie {
+        margin-left: 0px;
+    }
+    .Text2 h1, .btnBeladingsapp {
+        margin-right: 0px;
+    }
+}
